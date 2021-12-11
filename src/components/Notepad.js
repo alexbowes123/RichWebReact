@@ -2,7 +2,7 @@ import React, { Component } from "react"
 
 import { useState } from 'react';
 
-const Notepad = ({ handleAddNote }) => {
+const Notepad = ({ handleAddNote, currColor, currNote }) => {
 
     const [titleText, setTitleText] = useState('');
     const [bodyText, setBodyText] = useState('');
@@ -21,6 +21,7 @@ const Notepad = ({ handleAddNote }) => {
 
     const handleSaveClick = () => {
         console.log("reached handlesaveclicks");
+        console.log("current colour value is: " + currColor);
         handleAddNote(titleText,bodyText);
 
     };

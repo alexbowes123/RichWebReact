@@ -1,18 +1,23 @@
 import Note from './Note'
 
-const Notelist = ({ notes, handleAddNote }) => {
+const Notelist = ({ notes }) => {
 
     return(
 
         <div className = "ListNotes">
             <div id = "savedNotes" >
-                {notes.map((note)=> (
-                    <Note id = {note.id} 
+                {notes.map((note)=> {
+                    console.log(note);
+                    return(<Note id = {note.id} 
                     title = {note.title} 
                     date = {note.date} 
-                    body = {note.body} />
-                ))}
-                <Note handleAddNote={handleAddNote}/>
+                    body = {note.body}
+                    Bcolor = {note.backgroundColour} />)
+
+                    
+
+        
+                })}
             </div>
         </div> 
 

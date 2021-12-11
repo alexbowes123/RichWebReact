@@ -137,23 +137,23 @@ header{
     color: #DEDEDE
   }
 
-  .white{
+  .whiteNote{
       background-color: white;
   }
 
-.green{
+.greenNote{
     background-color: #86d51a;
 
 }
 
-.teal{
+.tealNote{
     background-color: #79FBD6;
 }
 
-.orange{
+.orangeNote{
     background-color: #FFD37F;
 }
 
-.pink{
+.pinkNote{
     background-color: #FF89FD ;
 }

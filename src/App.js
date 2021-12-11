@@ -9,13 +9,10 @@ import Notepad from "./components/Notepad";
 import './index.css';
 
 
-// class App extends Component {
-
-// //essentially our index.html?
-// render(){
-
 const App = () => {
   const[notes, setNotes] = useState([
+
+    
     // {
     //   id: nanoid(),
     //   title: "This is my first note!",
@@ -43,6 +40,35 @@ const App = () => {
 
   ]);
 
+
+  const [currNote, setCurrNote] = useState({
+    id: '',
+    title: '',
+    body: '',
+    color: '',
+  });
+
+  const changeColor = (newColor) => {
+    setCurrNote(prev => {
+      prev.color = newColor;
+      console.log("newCol "+newColor);
+      return prev;
+    });
+  };
+
+
+  //add a colour note state, create a function to pass the headers to change the colour
+
+  const defaultNote = {
+    id:'',
+    title: '',
+    date:'',
+    body:''
+
+  }
+  // const currentNote [titleText, bodyText, set] = useState(defaultNote);
+
+
   const addNote = (title,body) => {
 
     // console.log("the text is: " +title);
@@ -59,15 +85,19 @@ const App = () => {
       return;
     }
 
+    console.log("currentNote",currNote);
+
     const newNote = {
         id: nanoid(),
         title: title,
         date: date.toLocaleDateString(),
         body: body,
-        backgroundColour: 'white' // example colour
+        backgroundColour: currNote.color  // example colour
         
     }
-    const newNotes = [...notes, newNote];
+
+    console.log("new",newNote)
+    const newNotes = [...notes, newNote]; //get contents of notes array, spreading into array, then insert 1 more element called newnote
 
 
     setNotes(newNotes);
@@ -77,8 +107,9 @@ const App = () => {
     return (
     <div className="App">
       <Header/>
-      <Headers/>
-      <Notepad handleAddNote={addNote}/>
+      {/* trying to pass the prev with the colour up so it can be sent down to add note */}
+      <Headers changeColor ={changeColor}/> 
+      <Notepad  currColor = {currNote.color} handleAddNote={addNote}/>
       <NoteList notes={notes} handleAddNote = {addNote}/> 
     </div>
   );

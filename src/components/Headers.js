@@ -2,29 +2,19 @@ import { render } from "react-dom"
 import React, { Component } from "react"
 import { useState } from 'react';
 
-class Headers extends Component{
+export const Headers = ({ changeColor }) => {
 
-    constructor(props){
-        super(props)
+    // const [newColor, changeColor] = useState('white');
 
-        this.state = {
+    const handleColorChange = (event) =>{
 
-            colour:'white'
-           
-        }
-    }
+        changeColor(event.target.value);
+    };
 
-    handleColourChange = (e) =>{
-
-        this.setState(prev =>{
-            prev.colour = e.target.value;
-            return prev
-        }); 
-    }
   
 
 // const Headers = () => {
-    render() {
+    // render() {
         return(
         <div className = "headers">
                     <div id = "note-head">
@@ -32,14 +22,14 @@ class Headers extends Component{
                     </div>
                     <div id = "col-head">
                         <b>Colour Selector</b>
-                        {/* <div className = "colour-palette"> */}
-                        <div className = {this.state.colour}> 
-                            <select id="colour-picker" value = {this.state.colour} onChange = {this.handleColourChange}>
-                                <option value="white">White</option>
-                                <option value="green">Green</option>
-                                <option value="teal">Teal</option>
-                                <option value="orange">Orange</option> 
-                                <option value="pink">Pink</option>
+                        <div className = "colour-palette">
+                        {/* <div className = {this.state.colour}>   */}
+                            <select id="colour-picker" onChange = {handleColorChange}>
+                                <option value="whiteNote">White</option>
+                                <option value="greenNote">Green</option>
+                                <option value="tealNote">Teal</option>
+                                <option value="orangeNote">Orange</option> 
+                                <option value="pinkNote">Pink</option>
                             </select>
                         </div>
                     </div>
@@ -49,6 +39,6 @@ class Headers extends Component{
                 </div>
         )
     }
-}
+// }
 
 export default Headers
