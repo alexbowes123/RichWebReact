@@ -31,6 +31,10 @@ const App = () => {
   });
 
   const changeColor = (newColor) => {
+    //set the colour of background title and body here
+
+    
+  
     setCurrNote(prev => {
       prev.color = newColor;
       console.log("newCol "+newColor);
@@ -90,7 +94,8 @@ const App = () => {
       {/* trying to pass the prev with the colour up so it can be sent down to add note */}
       <Headers changeColor ={changeColor}/> 
       <Notepad  currColor = {currNote.color} handleAddNote={addNote}/>
-      <NoteList notes={notes} handleAddNote = {addNote}/> 
+      <NoteList notes={notes}/> 
+      {/* <NoteList notes={notes} handleAddNote = {addNote}/>  */}
     </div>
   );
 }

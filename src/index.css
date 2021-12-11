@@ -157,3 +157,52 @@ header{
 .pinkNote{
     background-color: #FF89FD ;
 }
+
+/* this is the styling for the title fields*/
+.whiteNoteTitle{
+  background-color: white;
+}
+
+.greenNoteTitle{
+background-color: #86d51a;
+
+}
+
+#Title{
+  background-color: #86d51a;
+  
+  }
+.tealNoteTitle{
+background-color: #79FBD6;
+}
+
+.orangeNoteTitle{
+background-color: #FFD37F;
+}
+
+.pinkNoteTitle{
+background-color: #FF89FD ;
+}
+
+
+/* this is the styling for the title fields*/
+.whiteNoteBody{
+  background-color: white;
+}
+
+.greenNoteBody{
+background-color: #86d51a;
+
+}
+
+.tealNoteBody{
+background-color: #79FBD6;
+}
+
+.orangeNoteBody{
+background-color: #FFD37F;
+}
+
+.pinkNoteBody{
+background-color: #FF89FD ;
+}

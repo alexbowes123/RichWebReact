@@ -4,8 +4,6 @@ import { useState } from 'react';
 
 export const Headers = ({ changeColor }) => {
 
-    // const [newColor, changeColor] = useState('white');
-
     const handleColorChange = (event) =>{
 
         changeColor(event.target.value);

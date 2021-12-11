@@ -2,7 +2,7 @@ import React, { Component } from "react"
 
 import { useState } from 'react';
 
-const Notepad = ({ handleAddNote, currColor, currNote }) => {
+const Notepad = ({ handleAddNote}) => {
 
     const [titleText, setTitleText] = useState('');
     const [bodyText, setBodyText] = useState('');
@@ -16,12 +16,11 @@ const Notepad = ({ handleAddNote, currColor, currNote }) => {
         setBodyText(event.target.value)
 
     }
-
     
 
     const handleSaveClick = () => {
         console.log("reached handlesaveclicks");
-        console.log("current colour value is: " + currColor);
+        console.log("current colour value is: ");
         handleAddNote(titleText,bodyText);
 
     };
@@ -31,7 +30,8 @@ const Notepad = ({ handleAddNote, currColor, currNote }) => {
             <div class = "notePadFields">
 
                 {/* set this to change the title colour */}
-                <div id = "note-title"> 
+                {/* give the corrseponding colours in css the same css properties aas below */}
+                <div id= "title-body"> 
                     <input id = "title-field" type="text" value = {titleText} onChange = {handleTitleChange} placeholder = "Title of Note"/>
                 </div>
                 {/* set this to change the body colour */}
