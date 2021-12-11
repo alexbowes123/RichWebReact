@@ -93,7 +93,7 @@ const App = () => {
       <Header/>
       {/* trying to pass the prev with the colour up so it can be sent down to add note */}
       <Headers changeColor ={changeColor}/> 
-      <Notepad  currColor = {currNote.color} handleAddNote={addNote}/>
+      <Notepad  currNote = {currNote} currColor = {currNote.color} handleAddNote={addNote}/>
       <NoteList notes={notes}/> 
       {/* <NoteList notes={notes} handleAddNote = {addNote}/>  */}
     </div>

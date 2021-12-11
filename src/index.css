@@ -158,51 +158,147 @@ header{
     background-color: #FF89FD ;
 }
 
-/* this is the styling for the title fields*/
+/* this is the styling for the  NOTEPAD title field*/
+
+
+/* WHITE TITLE FIELD */
+
 .whiteNoteTitle{
   background-color: white;
-}
+  
+  }
+  #whiteNotetitle-field {
+    font-size: 18px;
+    font-weight: 600;
+    background-color: white;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+  }
 
+
+/* GREEN TITLE FIELD */
 .greenNoteTitle{
 background-color: #86d51a;
 
 }
-
-#Title{
+#greenNotetitle-field {
+  font-size: 18px;
+  font-weight: 600;
   background-color: #86d51a;
-  
-  }
-.tealNoteTitle{
-background-color: #79FBD6;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
 }
 
-.orangeNoteTitle{
-background-color: #FFD37F;
+/* TEAL TITLE FIELD */
+
+.tealNoteTitle{
+  background-color: #79FBD6;
+  
 }
+
+#tealNotetitle-field {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #79FBD6;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+
+/* ORANGE TITLE FIELD */
+.orangeNoteTitle{
+  background-color: #FFD37F;
+  
+}
+
+#orangeNotetitle-field {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #FFD37F;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+
+/* PINK TITLE FIELD */
 
 .pinkNoteTitle{
-background-color: #FF89FD ;
+  background-color: #FF89FD ;
+  
+}
+
+#pinkNotetitle-field {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #FF89FD ;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
 }
 
 
-/* this is the styling for the title fields*/
-.whiteNoteBody{
+/* BODY FIELD STYLING */
+
+#whiteNoteBody-field{
   background-color: white;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+    font-weight: 500;
+    height: 400px;
 }
 
-.greenNoteBody{
-background-color: #86d51a;
-
+#greenNoteBody-field{
+  background-color: #86d51a;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+  font-weight: 500;
+  height: 400px;
 }
 
-.tealNoteBody{
-background-color: #79FBD6;
+#tealNoteBody-field{
+  background-color: #79FBD6;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+  font-weight: 500;
+  height: 400px;
 }
 
-.orangeNoteBody{
-background-color: #FFD37F;
+#orangeNoteBody-field{
+  background-color: #FFD37F;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+  font-weight: 500;
+  height: 400px;
 }
 
-.pinkNoteBody{
-background-color: #FF89FD ;
+#pinkNoteBody-field{
+   background-color: #FF89FD ; 
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+    font-weight: 500;
+    height: 400px;
 }
