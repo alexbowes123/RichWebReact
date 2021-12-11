@@ -12,31 +12,13 @@ import './index.css';
 const App = () => {
   const[notes, setNotes] = useState([
 
-    
+    // array of notes (included example note here)
     // {
     //   id: nanoid(),
     //   title: "This is my first note!",
     //   date: "08/12/21",
     //   body: "This is the body!"
     // },
-    // {
-    //   id: nanoid(),
-    //   title: "This is my second note!",
-    //   date: "01/12/21",
-    //   body: "This is the 2nd body!"
-    // },
-    // {
-    //   id: nanoid(),
-    //   title: "This is my third note!",
-    //   date: "04/12/21",
-    //   body: "This is the 3rd body!"
-    // },
-    // {
-    //   id: nanoid(),
-    //   title: "This is my NEW note!",
-    //   date: "15/12/21",
-    //   body: "This is the NEW body!"
-    // }
 
   ]);
 
@@ -68,10 +50,9 @@ const App = () => {
   }
   // const currentNote [titleText, bodyText, set] = useState(defaultNote);
 
-
+  //logic for adding a note
   const addNote = (title,body) => {
 
-    // console.log("the text is: " +title);
     const date = new Date();
 
 
@@ -81,7 +62,7 @@ const App = () => {
       return;
     }
     if(body === ""){
-      alert("add a body value");    //move this according to mikael
+      alert("add a body value");  
       return;
     }
 
@@ -92,13 +73,12 @@ const App = () => {
         title: title,
         date: date.toLocaleDateString(),
         body: body,
-        backgroundColour: currNote.color  // example colour
-        
+        backgroundColour: currNote.color    
     }
 
-    console.log("new",newNote)
+    // console.log("new",newNote)
+    
     const newNotes = [...notes, newNote]; //get contents of notes array, spreading into array, then insert 1 more element called newnote
-
 
     setNotes(newNotes);
 

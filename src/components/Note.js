@@ -3,8 +3,6 @@ const handleEditClick = () => {
     console.log("current title: " + Note.title);
     console.log("current body: " + Note.bodyText);
     console.log("current col: " + Note.Bcolor);
-    // handleAddNote(titleText,bodyText); going to need this note's title, body and background colour
-
 };
 
 

@@ -13,9 +13,6 @@ const Notelist = ({ notes }) => {
                     date = {note.date} 
                     body = {note.body}
                     Bcolor = {note.backgroundColour} />)
-
-                    
-
         
                 })}
             </div>
