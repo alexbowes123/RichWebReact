@@ -1,24 +1,18 @@
-import React, { Component} from "react";
+import React from "react";
 import { useState } from 'react';
-import { nanoid } from 'nanoid';
-
 import Header from "./components/Header";
 import Headers from "./components/Headers";
 import NoteList from "./components/Notelist";
 import Notepad from "./components/Notepad";
+import Note from "./components/Note";
 import './index.css';
 
+let counter = 0; //holds the number of notes
 
 const App = () => {
-  const[notes, setNotes] = useState([
 
-    // array of notes (included example note here)
-    // {
-    //   id: nanoid(),
-    //   title: "This is my first note!",
-    //   date: "08/12/21",
-    //   body: "This is the body!"
-    // },
+  /* Array of notes to be displayed */
+  const[notes, setNotes] = useState([
 
   ]);
 
@@ -27,13 +21,13 @@ const App = () => {
     id: '',
     title: '',
     body: '',
-    color: '',
+    color: 'whiteNote',
   });
 
-  const changeColor = (newColor) => {
-    //set the colour of background title and body here
 
-    
+  //change the colour of the notepad
+
+  const changeColor = (newColor) => {    
   
     setCurrNote(prev => {
       prev.color = newColor;
@@ -43,22 +37,10 @@ const App = () => {
   };
 
 
-  //add a colour note state, create a function to pass the headers to change the colour
-
-  const defaultNote = {
-    id:'',
-    title: '',
-    date:'',
-    body:''
-
-  }
-  // const currentNote [titleText, bodyText, set] = useState(defaultNote);
-
   //logic for adding a note
   const addNote = (title,body) => {
 
     const date = new Date();
-
 
     //logic for checking title !== "" or body!== ""
     if(title === ""){
@@ -71,16 +53,16 @@ const App = () => {
     }
 
     console.log("currentNote",currNote);
+    counter++; //for id 
 
+    //create a new note with the following values
     const newNote = {
-        id: nanoid(),
+        id: counter,
         title: title,
         date: date.toLocaleDateString(),
         body: body,
         backgroundColour: currNote.color    
     }
-
-    // console.log("new",newNote)
     
     const newNotes = [...notes, newNote]; //get contents of notes array, spreading into array, then insert 1 more element called newnote
 
@@ -88,14 +70,44 @@ const App = () => {
 
   }
 
-    return (
+  const deleteNote = (id) => {
+
+    console.log("in deleteNote");
+
+    const removingNote = [...notes].filter(note => note.id !== id);
+
+    setNotes(removingNote);
+
+  }
+
+
+
+
+
+
+  const editNote = (editId, editTitle, editBody, editColor) => {
+    console.log("reached editNote on appjs!");
+    console.log(editId);
+    console.log(editTitle);
+    console.log(editBody);
+    console.log(editColor);
+
+    setCurrNote(prev => {
+      prev.id = editId;
+      prev.title = editTitle;
+      prev.body = editBody;
+      prev.color = editColor;
+      return prev;
+    });
+  }
+
+  return (
     <div className="App">
       <Header/>
-      {/* trying to pass the prev with the colour up so it can be sent down to add note */}
       <Headers changeColor ={changeColor}/> 
-      <Notepad  currNote = {currNote} currColor = {currNote.color} handleAddNote={addNote}/>
-      <NoteList notes={notes}/> 
-      {/* <NoteList notes={notes} handleAddNote = {addNote}/>  */}
+      <Notepad  currNote = {currNote} currColor = {currNote.color} handleAddNote={addNote} />
+      <NoteList notes={notes} handleEditNote = {editNote} handleDeleteNote = {deleteNote}/> 
+      <Note/>
     </div>
   );
 }

@@ -1,6 +1,5 @@
-import { render } from "react-dom"
-import React, { Component } from "react"
-import { useState } from 'react';
+import React  from "react"
+
 
 export const Headers = ({ changeColor }) => {
 
@@ -11,8 +10,6 @@ export const Headers = ({ changeColor }) => {
 
   
 
-// const Headers = () => {
-    // render() {
     return(
         <div className = "headers">
             <div id = "note-head">
@@ -21,7 +18,6 @@ export const Headers = ({ changeColor }) => {
             <div id = "col-head">
                 <b>Colour Selector</b>
                 <div className = "colour-palette">
-                {/* <div className = {this.state.colour}>   */}
                     <select id="colour-picker" onChange = {handleColorChange}>
                         <option value="whiteNote">White</option>
                         <option value="greenNote">Green</option>
