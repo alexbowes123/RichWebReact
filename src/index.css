@@ -99,17 +99,6 @@ header{
     border-radius: 5px;
     background-color: #c2aba6;
   }
-
-  
-/* button {
-    margin: 5px;
-    border: solid 3px #a8938f;
-    border-radius: 10%;
-    font-size: 22px;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #DEDEDE
-  } */
   
   button:hover, .colour-box:hover {
     cursor: pointer;

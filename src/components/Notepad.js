@@ -27,6 +27,9 @@ const Notepad = ({handleAddNote, currNote}) => {
         }
     };
 
+
+    //currNote.body holds the right value but not sure how to display it while the bodytext is being set in handleBodyChange
+
     return(
         <div class = "noteAndButton">
             <div class = "notePadFields">

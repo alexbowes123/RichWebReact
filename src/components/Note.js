@@ -31,6 +31,7 @@ export const Note = ({id, title, date, body, Bcolor, handleEditNote , handleDele
             <h4>{title}</h4>
             <h5>{date}</h5>
             <p>{body}</p>
+            <p>{id}</p>
             <button id = "edit-button" onClick = {handleEditClick} >Edit</button>
             <button id = "btn-delete" onClick = {handleDeleteClick} >Delete</button>
 
