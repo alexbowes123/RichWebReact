@@ -8,7 +8,7 @@ export const Headers = ({ changeColor }) => {
         changeColor(event.target.value);
     };
 
-  
+//   renders the "write something" header and the colour picker selector
 
     return(
         <div className = "headers">
@@ -27,9 +27,9 @@ export const Headers = ({ changeColor }) => {
                     </select>
                 </div>
             </div>
-            <div id = "list-head">
+            {/* <div id = "list-head">
                 <b>Existing Notes</b>
-            </div>
+            </div> */}
         </div>
     )
 }
